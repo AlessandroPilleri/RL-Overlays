@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+}
+.scorebug {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  color: black;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}

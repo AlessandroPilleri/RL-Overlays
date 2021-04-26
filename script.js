@@ -122,11 +122,48 @@ const WsSubscribers = {
 ///
 
 $(() => {
+
   WsSubscribers.init(49322, true);
+  WsSubscribers.subscribe("game", "statfeed_event", (d) => {
+    $(".statfeed .lista").append("<tr><td>evento</td></tr>");
+    setTimeout(() => {
+      $(".statfeed .lista tr:first-child").remove();
+    }, 3500);
+
+  })
   WsSubscribers.subscribe("game", "update_state", (d) => {
-    $(".scorebug .team.left .name").text(d['game']['teams'][0]['name']);
-    $(".scorebug .team.right .name").text(d['game']['teams'][1]['name']);
-    $(".scorebug .team.left .score").text(d['game']['teams'][0]['score']);
-    $(".scorebug .team.right .score").text(d['game']['teams'][1]['score']);
+
+    // Scoreboard
+
+    $(".score .team1 .teamName").text(d['game']['teams'][0]['name']);
+    $(".score .team2 .teamName").text(d['game']['teams'][1]['name']);
+    $(".score .team1 .teamScore").text(d['game']['teams'][0]['score']);
+    $(".score .team2 .teamScore").text(d['game']['teams'][1]['score']);
+    minutes = Math.trunc(d['game']['time'] / 60);
+    seconds = Math.ceil(d['game']['time'] % 60);
+    $(".score .time").text(minutes + " " + seconds);
+
+    // Player lists
+
+    i = 1;
+
+    Object.keys(d['players']).forEach((e) => {
+
+      if (d['players'][e].team == 0) {
+        $(".team1players .player" + i + " .name").text(d['players'][e]['name']);
+        $(".team1players .player" + i + " .boost").text(d['players'][e]['boost']);
+      } else {
+        $(".team2players .player" + i + " .name").text(d['players'][e]['name']);
+        $(".team2players .player" + i + " .boost").text(d['players'][e]['boost']);
+      }
+
+      i++;
+      if (i == 4) {
+        i = 1;
+      }
+    });
+
+    //$(".team1players .player1 .name").text(d['players'][]['name']);
+    //$(".team1players .player1 .boost").text(d['players'][0]['boost']);
   })
 });

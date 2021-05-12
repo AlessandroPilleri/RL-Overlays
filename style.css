@@ -1,0 +1,20 @@
+.score {
+  border: 1px solid red;
+}
+.statfeed {
+  border: 1px solid blue;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.teamplayers {
+  border: 1px solid green;
+  position: absolute;
+  top: 30%;
+}
+.playerinfo {
+  border: 1px solid pink;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}

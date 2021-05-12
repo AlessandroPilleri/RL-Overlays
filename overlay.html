@@ -1,64 +1,97 @@
 <html>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
-    <!-- score -->
+    <div class="container">
 
-    <div class="score">
-      <div class="team1">
-        <div class="teamName"></div>
-        <div class="teamScore"></div>
+      <!-- score -->
+      <div class="score row">
+        <div class="team1 col-md-4 text-right">
+          <div class="row">
+            <div class="teamName col-md-10"></div>
+            <div class="teamScore col-md-2"></div>
+          </div>
+        </div>
+        <div class="time col-md-4 text-center"></div>
+        <div class="team2 col-md-4 text-left">
+          <div class="row">
+            <div class="teamScore col-md-2"></div>
+            <div class="teamName col-md-10"></div>
+          </div>
+        </div>
       </div>
-      <div class="time"></div>
-      <div class="team2">
-        <div class="teamName"></div>
-        <div class="teamScore"></div>
-      </div>
+
     </div>
 
     <!-- statfeed events -->
-
     <div class="statfeed">
         <table class="lista">
         </table>
     </div>
 
+  </div>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+
     <!-- team players -->
 
-    <div class="team1players">
-      <h3>Team 1</h3>
-      <div class="player1">
-        <div class="name"></div>
-        <div class="boost"></div>
+  <div class="container-fluid teamplayers">
+    <div class="row">
+      <div class="team1players col-md-6 text-left">
+        <h3>Team 1</h3>
+        <div class="player1">
+          <div class="name"></div>
+          <div class="boost"></div>
+        </div>
+        <div class="player2">
+          <div class="name"></div>
+          <div class="boost"></div>
+        </div>
+        <div class="player3">
+          <div class="name"></div>
+          <div class="boost"></div>
+        </div>
       </div>
-      <div class="player2">
-        <div class="name"></div>
-        <div class="boost"></div>
-      </div>
-      <div class="player3">
-        <div class="name"></div>
-        <div class="boost"></div>
+      <div class="team2players col-md-6 text-right">
+        <h3>Team 2</h3>
+        <div class="player1">
+          <div class="name"></div>
+          <div class="boost"></div>
+        </div>
+        <div class="player2">
+          <div class="name"></div>
+          <div class="boost"></div>
+        </div>
+        <div class="player3">
+          <div class="name"></div>
+          <div class="boost"></div>
+        </div>
       </div>
     </div>
-    <div class="team2players">
-      <h3>Team 2</h3>
-      <div class="player1">
-        <div class="name"></div>
-        <div class="boost"></div>
-      </div>
-      <div class="player2">
-        <div class="name"></div>
-        <div class="boost"></div>
-      </div>
-      <div class="player3">
-        <div class="name"></div>
-        <div class="boost"></div>
-      </div>
+  </div>
+
+  <!-- player info -->
+  <div class="container playerinfo">
+    <div class="name"></div>
+    <div class="row">
+      <div class="score col-sm-2"></div>
+      <div class="goals col-sm-2"></div>
+      <div class="assists col-sm-2"></div>
+      <div class="shots col-sm-2"></div>
+      <div class="saves col-sm-2"></div>
+      <div class="demos col-sm-2"></div>
     </div>
+  </div>
 
 
    <script src="script.js"></script>

@@ -125,7 +125,7 @@ $(() => {
 
   WsSubscribers.init(49322, true);
   WsSubscribers.subscribe("game", "statfeed_event", (d) => {
-    $(".statfeed .lista").append("<tr><td>evento</td></tr>");
+    $(".statfeed .lista").append("<tr><td>" + d['main_target']['name'] + " " + d['type'] + "</td></tr>");
     setTimeout(() => {
       $(".statfeed .lista tr:first-child").remove();
     }, 3500);
@@ -163,7 +163,16 @@ $(() => {
       }
     });
 
-    //$(".team1players .player1 .name").text(d['players'][]['name']);
-    //$(".team1players .player1 .boost").text(d['players'][0]['boost']);
+    // Player info
+    if (d['game']['target']) {
+      $(".playerinfo .name").text(d['players'][d['game']['target']]['name']);
+      $(".playerinfo .score").text(d['players'][d['game']['target']]['score']);
+      $(".playerinfo .goals").text(d['players'][d['game']['target']]['goals']);
+      $(".playerinfo .assists").text(d['players'][d['game']['target']]['assists']);
+      $(".playerinfo .shots").text(d['players'][d['game']['target']]['shots']);
+      $(".playerinfo .saves").text(d['players'][d['game']['target']]['saves']);
+      $(".playerinfo .demos").text(d['players'][d['game']['target']]['demos']);
+    }
+
   })
 });

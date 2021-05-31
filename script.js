@@ -123,6 +123,7 @@ const WsSubscribers = {
 
 $(() => {
 
+  flag = false;
   WsSubscribers.init(49322, true);
   WsSubscribers.subscribe("game", "statfeed_event", (d) => {
     $(".statfeed .lista").append("<tr><td>" + d['main_target']['name'] + " " + d['type'] + "</td></tr>");
@@ -135,13 +136,26 @@ $(() => {
 
     // Scoreboard
 
-    $(".score .team1 .teamName").text(d['game']['teams'][0]['name']);
-    $(".score .team2 .teamName").text(d['game']['teams'][1]['name']);
-    $(".score .team1 .teamScore").text(d['game']['teams'][0]['score']);
-    $(".score .team2 .teamScore").text(d['game']['teams'][1]['score']);
+    $(".scoreboard .team1 .teamName").text(d['game']['teams'][0]['name']);
+    $(".scoreboard .team2 .teamName").text(d['game']['teams'][1]['name']);
+    $(".scoreboard .teamScore .team1Score").text(d['game']['teams'][0]['score']);
+    $(".scoreboard .teamScore .team2Score").text(d['game']['teams'][1]['score']);
     minutes = Math.trunc(d['game']['time'] / 60);
     seconds = Math.ceil(d['game']['time'] % 60);
-    $(".score .time").text(minutes + " " + seconds);
+
+    if (seconds == 60 && minutes > 0) {
+      minutes++;
+      seconds = 0;
+    }
+    if (flag == false) {
+      if (minutes == 0 && seconds == 0) {
+        flag = true;
+      }
+    }
+    if (flag == true) {
+      seconds = Math.floor(d['game']['time'] % 60);
+    }
+    $(".scoreboard .time").text(minutes + " " + (seconds<10?'0':'') + seconds);
 
     // Player lists
 

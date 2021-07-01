@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+html {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+div {
+  /*border: 1px solid grey;*/
+}
+.scoreboard {
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  padding: 0;
+  width: 722px;
+  height: 82px;
+}
+.scoreboard img {
+  padding: 0 !important;
+  position: absolute;
+  z-index: -1;
+}
+.shalla {
+  display: flex;
+  flex-wrap: wrap;
+  height: 82px;
+}
+.team1, .team2 {
+  padding-top: 4%;
+  width: 31%;
+  font-size: 25px;
+  font-weight: 700;
+  color: white;
+}
+.team1 {
+  padding-left: 10px;
+}
+.team2 {
+  padding-right: 15px;
+}
+.time {
+  font-size: 57px;
+  font-weight: 700;
+  width: 18.5%;
+}
+.teamScore {
+  font-size: 45px;
+  font-weight: 700;
+  width: 19%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 15px;
+}
+.team1Score, .team2Score {
+  width: 40%;
+}
+.time {
+  padding-right: 5px;
+  padding-top: 5px;
+}
+.statfeed {
+  position: absolute;
+  top: 20px;
+  right: 14px;
+}
+.lista {
+  border-collapse: separate;
+  border-spacing: 0 0.2em;
+}
+.evento {
+  width: 187px;
+  height: 36px;
+}
+/*.evento .name {
+  padding-right: 10px;
+  padding-bottom: 3px;
+  font-weight: 700;
+  color: white;
+}*/
+.teamplayers {
+  position: absolute;
+  top: 60%;
+}
+.teamplayers img {
+  position: absolute;
+  z-index: -1;
+}
+.player1, .player2 {
+  height: 53px;
+}
+.player2 {
+  position: absolute;
+  right: 14px;
+  width: 293px;
+}
+.player1 .name {
+  padding-left: 10px;
+  padding-top: 5px;
+  font-weight: 700;
+  color: white;
+  float: left;
+  overflow: hidden;
+}
+.player1 .looking {
+  float: right;
+  overflow: hidden;
+  width: 694px;
+  padding-top: 5px;
+  font-weight: 700;
+  color: red;
+  display: none;
+}
+.player2 .looking {
+  float: left;
+  overflow: hidden;
+  font-weight: 700;
+  color: red;
+  padding-top: 5px;
+  padding-left: 10px;
+  display: none;
+}
+.player2 .name {
+  padding-right: 10px;
+  padding-top: 5px;
+  font-weight: 700;
+  color: white;
+  overflow: hidden;
+}
+.boost {
+  position: absolute;
+  bottom: 0;
+}
+.progress {
+  height: 15px;
+  width: 292px;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 0px 0px 5px 5px;
+  clear: both;
+}
+.team1players .progress {
+  background-image: linear-gradient(to right, yellow, orange, red, blue);
+}
+.team2players .progress {
+  background-image: linear-gradient(to right, blue, red, orange, yellow);
+}
+.progress-bar {
+  background-image: linear-gradient(to bottom, #515151, #303030);
+}
+.playerinfo {
+  border: 1px solid pink;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+.replaybar {
+  position: absolute;
+  bottom: 10%;
+}
+.replaybar img {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.replaybar .name {
+  float: right;
+  overflow: hidden;
+  padding-right: 80px;
+  padding-bottom: 3px;
+  font-weight: 700;
+  color: white;
+}
+.replaybar .speed {
+  float: right;
+  overflow: hidden;
+  padding-right: 20px;
+  padding-bottom: 3px;
+  font-weight: 700;
+  color: white;
+}

@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+
+    <div class="container scoreboard">
+      <img class="image" src="template/scoreboard.png" alt="">
+      <!-- score -->
+      <!--<div class="shalla">
+        <div class="team1 text-center">
+          <div class="teamName"></div>
+          <div class="teamScore"></div>
+        </div>
+        <div class="team2 text-center">
+          <div class="teamScore"></div>
+          <div class="teamName"></div>
+        </div>
+        <div class="time text-center"></div>
+      </div>-->
+
+      <div class="shalla">
+        <div class="team1 text-left">
+          <div class="teamName"></div>
+        </div>
+        <div class="teamScore">
+          <div class="team1Score text-right"></div>-
+          <div class="team2Score text-left"></div>
+        </div>
+        <div class="team2 text-right">
+          <div class="teamName"></div>
+        </div>
+        <div class="time text-center"></div>
+      </div>
+
+
+    </div>
+
+    <!-- statfeed events -->
+    <div class="statfeed">
+      <table class="lista">
+      </table>
+    </div>
+
+  </div>
+
+    <!-- team players -->
+
+  <div class="container-fluid teamplayers">
+    <div class="row">
+      <div class="team1players col-md-6 text-left">
+        <img class="image" src="template/boost-blu.png" alt="">
+        <div class="player1">
+          <div class="player">
+            <div class="name"></div>
+            <div class="looking">⬤ REC</div>
+          </div>
+          <div class="boost">
+
+            <div class="progress justify-content-end">
+              <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="blue-player-1-p-bar">
+                <span class="text-light" id="blue-player-1-boost"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="team2players col-md-6">
+        <div class="player2">
+          <img class="image" src="template/boost-arancione.png" alt="boost-arancione">
+          <div class="player">
+            <div class="looking">⬤ REC</div>
+            <div class="name text-right"></div>
+          </div>
+          <div class="boost">
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="orange-player-1-p-bar">
+                <!--<span class="text-light" id="orange-player-1-boost"></span>-->
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Replay bar -->
+
+  <div class="container-fluid replaybar text-center">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <img src="template/replay.png" alt="replay">
+        <div class="content">
+          <div class="name"></div>
+          <div class="speed"></div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+
+
+   <script src="script.js"></script>
+  </body>
+</html>
